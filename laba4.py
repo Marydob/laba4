@@ -9,8 +9,17 @@ def laba42():
         a = int(input("введите число: "))
         tmp = 100 / a
         print(tmp)
-    except Exception as e:
-        print("Error! " + str("некорректный ввод"))
+    except ValueError:
+        print("Error! " + str("введите число"))
+    except ZeroDivisionError:
+        print("Error! " + str("введите число не равное 0"))
+
+#второй вариант
+#except Exception as e:
+        #print("Error! " + str("некорректный ввод"))
+
+
+
 def laba43():
     a=input("введите дату через точку(ДД.ММ.ГГГГ): ")
     d=int(a[0]+a[1])
